@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/white</color>
+    <color name="colorAccent">#5877F3</color>
+    <color name="colorAccentAlpha">#665a73fc</color>
+    <color name="background">#F1F5F8</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="passive">#707070</color>
+    <color name="text_color">#333333</color>
+    <color name="text_info_color">#818181</color>
+    <color name="text_hint_color">#ada7a7a7</color>
+    <color name="empty_text_color">#ed7c7a7a</color>
+    <color name="empty_icon_color">#b9949494</color>
+    <color name="divider">#fff7f7f7</color>
+    <color name="light_silver">#c2c2c2</color>
+    <color name="click_light_silver">#dfdfdf</color>
+    <color name="red">#ff0000</color>
+    <color name="green">#09a667</color>
+    <color name="dark_silver">#545454</color>
+    <color name="yellow">#F2CB3F</color>
+    <color name="blue">#2d5da8</color>
+
+    <color name="toolbar_icon_color_silver_dark">#323234</color>
+    <color name="toolbar_subtitle_icon_color_silver_dark">#616166</color>
+
+    <color name="navigation_item_default">#97A1A5</color>
+
+    <color name="tab_white_normal">#8dffffff</color>
+    <color name="tab_white_select">#ffffff</color>
+
+    <color name="action_mode_color">#e7e7e7</color>
+
+    <color name="colorChipViewBackground">#E0E0E0</color>
+    <color name="chips_opened_bg">#009688</color>
+    <color name="colorCloseChip">#ababab</color>
+    <color name="white_transparency">#b9ffffff</color>
+
+    <array name="letter_tile_colors">
+        <item>#f16364</item>
+        <item>#f58559</item>
+        <item>#f9a43e</item>
+        <item>#e4c62e</item>
+        <item>#67bf74</item>
+        <item>#59a2be</item>
+        <item>#2093cd</item>
+        <item>#ad62a7</item>
+    </array>
+
+</resources>

@@ -1,0 +1,33 @@
+<resources>
+    <string name="title">MyGowLib</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="cancel">Отмена</string>
+    <string name="ok">OK</string>
+    <string name="menu">Меню</string>
+    <string name="search">Поиск</string>
+    <string name="clear">Очистить</string>
+    <string name="open">Открыть</string>
+    <string name="close">Закрыть</string>
+    <string name="error">Ошибка</string>
+    <string name="add">Добавить</string>
+    <string name="save">Сохранить</string>
+    <string name="edit">Редактировать</string>
+    <string name="remove">Удалить</string>
+    <string name="warning">Предупреждение</string>
+
+    <string name="date_format">дд.мм.гггг</string>
+    <string name="time_format">чч:мм</string>
+
+    <string name="loading">Загрузка…</string>
+    <string name="not_selected">Не выбрано</string>
+    <string name="others">Другие</string>
+    <string name="show_all">Показать все</string>
+    <string name="show">Показать</string>
+
+    <string name="connecting_suspended">Подключение приостановлено</string>
+    <string name="cannot_create_location_dialog">Настройки местоположения, являются неадекватными, и не может быть установлена здесь.</string>
+    <string name="cannot_execute_request">Невозможно выполнить запрос</string>
+
+    <string name="please_wait">Пожалуйста, подождите</string>
+</resources>
