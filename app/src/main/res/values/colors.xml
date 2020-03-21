@@ -2,26 +2,46 @@
 <resources>
     <color name="colorPrimary">@color/white</color>
     <color name="colorPrimaryDark">@color/white</color>
-    <color name="colorAccent">#5877F3</color>
-    <color name="colorAccentAlpha">#665a73fc</color>
-    <color name="background">#F1F5F8</color>
 
-    <color name="white">#FFFFFF</color>
+    <color name="background">#F1F5F8</color>
     <color name="black">#000000</color>
-    <color name="passive">#707070</color>
+    <color name="blue">#2d5da8</color>
+    <color name="green_light">#009688</color>
+    <color name="click_light_silver">#dfdfdf</color>
+    <color name="colorAccent">#5877F3</color>
+    <color name="colorAccentRed">#FF6238</color>
+    <color name="colorAccentSilver">#A6AAAF</color>
+    <color name="colorAccentAlpha">#665a73fc</color>
+    <color name="dark_silver">#545454</color>
+    <color name="green">#09a667</color>
+    <color name="light_silver">#c2c2c2</color>
+    <color name="red">#ff0000</color>
     <color name="text_color">#333333</color>
-    <color name="text_info_color">#818181</color>
     <color name="text_hint_color">#ada7a7a7</color>
+    <color name="text_info_color">#818181</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_transparency">#b9ffffff</color>
+    <color name="yellow">#F2CB3F</color>
+    <color name="end_gradient_color">#F2CB3F</color>
+    <color name="orange">#F58E18</color>
+    <color name="brown">#943001</color>
+    <color name="start_gradient_color">#ff0000</color>
+
+    <array name="car_color">
+        <item>#F1F5F8</item>
+        <item>#000000</item>
+        <item>#5877F3</item>
+        <item>#ff0000</item>
+        <item>#818181</item>
+        <item>#FFDBDB</item>
+        <item>#F2CB3F</item>
+        <item>#943001</item>
+        <item>#09a667</item>
+    </array>
+
     <color name="empty_text_color">#ed7c7a7a</color>
     <color name="empty_icon_color">#b9949494</color>
     <color name="divider">#fff7f7f7</color>
-    <color name="light_silver">#c2c2c2</color>
-    <color name="click_light_silver">#dfdfdf</color>
-    <color name="red">#ff0000</color>
-    <color name="green">#09a667</color>
-    <color name="dark_silver">#545454</color>
-    <color name="yellow">#F2CB3F</color>
-    <color name="blue">#2d5da8</color>
 
     <color name="toolbar_icon_color_silver_dark">#323234</color>
     <color name="toolbar_subtitle_icon_color_silver_dark">#616166</color>
@@ -36,7 +56,6 @@
     <color name="colorChipViewBackground">#E0E0E0</color>
     <color name="chips_opened_bg">#009688</color>
     <color name="colorCloseChip">#ababab</color>
-    <color name="white_transparency">#b9ffffff</color>
 
     <array name="letter_tile_colors">
         <item>#f16364</item>

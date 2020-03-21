@@ -15,4 +15,7 @@
 
     <dimen name="tile_letter_font_size">17sp</dimen>
     <dimen name="letter_tile_size">32dp</dimen>
+
+    <dimen name="square_size">35dp</dimen>
+    <dimen name="view_corner_radius">3dp</dimen>
 </resources>

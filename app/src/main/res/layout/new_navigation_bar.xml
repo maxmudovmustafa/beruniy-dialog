@@ -1,0 +1,10 @@
+<com.ramotion.navigationtoolbar.NavigationToolBarLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <include layout="@layout/activity_main"/>
+
+</com.ramotion.navigationtoolbar.NavigationToolBarLayout>
+
+        <!--app:layout_anchor="@id/com_ramotion_app_bar"-->

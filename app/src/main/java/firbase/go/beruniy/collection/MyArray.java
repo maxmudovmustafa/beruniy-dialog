@@ -525,20 +525,6 @@ public class MyArray<E> implements Iterable<E> {
     }
 
     /**
-     *
-     *
-     * @param acc
-     * @param reducer
-     * @return
-     */
-    public <A> A reduce(A acc, MyReducer<A, E> reducer) {
-        for (Object aData : data) {
-            acc = reducer.apply(acc, (E) aData);
-        }
-        return acc;
-    }
-
-    /**
      * the function that sorts elements and outputs the result
      * as a new {@link MyArray}
      *
