@@ -14,6 +14,6 @@ allprojects {
 }
 
 dependencies {
-      implementation 'com.github.MrShoxruxbek:beruniy-dialog:{latest version}'
+      implementation 'com.github.mr-shoxruxbek:beruniy-dialog:{latest version}'
 }
 ```  
