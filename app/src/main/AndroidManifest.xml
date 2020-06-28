@@ -2,20 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
           package="firbase.go.beruniy">
 
-    <!--<application-->
-            <!--android:allowBackup="true"-->
-            <!--android:icon="@mipmap/ic_launcher"-->
-            <!--android:label="@string/title"-->
-            <!--android:roundIcon="@mipmap/ic_launcher_round"-->
-            <!--tools:replace="android:label"-->
-            <!--android:supportsRtl="true">-->
-        <!--<activity android:name=".MainActivity">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN"/>-->
-
-                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
-            <!--</intent-filter>-->
-        <!--</activity>-->
-    <!--</application>-->
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/title"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            tools:replace="android:label"
+            android:supportsRtl="true">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+<!---->
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>
