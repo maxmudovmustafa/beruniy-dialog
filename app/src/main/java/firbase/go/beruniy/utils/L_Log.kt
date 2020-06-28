@@ -4,7 +4,7 @@ import android.util.Log
 import firbase.go.beruniy.BuildConfig
 
 class L_Log {
-    private val TAG = "L_LOG"
+    private val TAG = "mgow"
     var DEBUG = BuildConfig.DEBUG
 
     fun log(message: String) {

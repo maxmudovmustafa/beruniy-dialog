@@ -1,8 +1,5 @@
 package firbase.go.beruniy.util;
 
-/*
-// http://www.java2s.com/Code/Java/Data-Type/Comparetwocharsequences.htm
- */
 public class CharSequenceUtil {
     /**
      * Tests if s starts with t, ignoring the case of the characters
