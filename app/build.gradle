@@ -1,5 +1,5 @@
-//apply plugin: 'com.android.library'
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+//apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.github.dcendents.android-maven'
@@ -20,7 +20,7 @@ android {
 //        applicationId "firbase.go.beruniy"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 1
+        versionCode 4
         versionName version
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -30,14 +30,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    lintOptions {
-        abortOnError false
-    }
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-        androidTest.java.srcDirs += 'src/androidTest/kotlin'
-        androidTest.resources.srcDirs += 'src/androidTest/res'
-    }
+//    lintOptions {
+//        abortOnError false
+//    }
+//    sourceSets {
+//        main.java.srcDirs += 'src/main/kotlin'
+//        androidTest.java.srcDirs += 'src/androidTest/kotlin'
+//        androidTest.resources.srcDirs += 'src/androidTest/res'
+//    }
     android {
         compileOptions {
             sourceCompatibility 1.8
@@ -61,29 +61,29 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
-
-
-task sourcesJar(type: Jar) {
-    classifier = 'sources'
-    from android.sourceSets.main.java.sourceFiles
-}
-
-task javadoc(type: Javadoc) {
-    source = android.sourceSets.main.java.sourceFiles
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-
-task classesJar(type: Jar) {
-    from "$buildDir/intermediates/classes/release"
-}
-
-artifacts {
-    archives classesJar
-    archives javadocJar
-    archives sourcesJar
-}
+//
+//
+//task sourcesJar(type: Jar) {
+//    classifier = 'sources'
+//    from android.sourceSets.main.java.sourceFiles
+//}
+//
+//task javadoc(type: Javadoc) {
+//    source = android.sourceSets.main.java.sourceFiles
+//    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+//}
+//
+//task javadocJar(type: Jar, dependsOn: javadoc) {
+//    classifier = 'javadoc'
+//    from javadoc.destinationDir
+//}
+//
+//task classesJar(type: Jar) {
+//    from "$buildDir/intermediates/classes/release"
+//}
+//
+//artifacts {
+//    archives classesJar
+//    archives javadocJar
+//    archives sourcesJar
+//}

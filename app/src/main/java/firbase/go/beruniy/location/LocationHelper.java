@@ -7,7 +7,6 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import androidx.annotation.RequiresPermission;
-//import android.support.annotation.RequiresPermission;
 
 @SuppressWarnings("MissingPermission")
 public class LocationHelper {

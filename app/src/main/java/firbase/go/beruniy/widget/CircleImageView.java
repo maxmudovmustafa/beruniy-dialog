@@ -27,7 +27,7 @@ import androidx.appcompat.widget.AppCompatImageView;
 import firbase.go.beruniy.R;
 
 
-public class CircleImageView extends AppCompatImageView {
+public class CircleImageView extends    AppCompatImageView {
 
     private static final ScaleType SCALE_TYPE = ScaleType.CENTER_CROP;
 
