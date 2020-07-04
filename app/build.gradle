@@ -13,7 +13,7 @@ android {
 //        applicationId "firbase.go.beruniy"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 6
+        versionCode 7
         versionName version
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

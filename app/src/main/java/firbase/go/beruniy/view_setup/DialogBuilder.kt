@@ -2,6 +2,7 @@ package firbase.go.beruniy.view_setup
 
 import android.app.Activity
 import android.app.AlertDialog
+import android.view.View
 import android.widget.ArrayAdapter
 import firbase.go.beruniy.utils.Command
 import firbase.go.beruniy.R
@@ -26,6 +27,8 @@ class DialogBuilder {
 
 
     private var cancelable: Boolean = true
+
+    private var vsRoot: View? = null
 
     fun cancelable(value: Boolean): DialogBuilder {
         cancelable = value
@@ -214,6 +217,25 @@ class DialogBuilder {
                 R.string.cancel
             )
         }
+    }
+
+
+    fun createDialog(
+        context: Activity,
+        layout: Int,
+        cancelable: Boolean
+    ) {
+
+        val dialogBuilder = androidx.appcompat.app.AlertDialog.Builder(context)
+        val dialog = dialogBuilder.create()
+        vsRoot = context.layoutInflater.inflate(layout, null)
+
+        dialog.setCancelable(cancelable)
+        dialog.setView(vsRoot)
+        dialog.setCanceledOnTouchOutside(cancelable)
+
+
+        dialog.show()
     }
 
     interface CommandFacade<T> {

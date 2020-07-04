@@ -2,7 +2,9 @@ package firbase.go.beruniy.utils
 
 import android.app.Activity
 import android.view.MotionEvent
+import android.view.View
 import android.widget.EditText
+import androidx.appcompat.app.AlertDialog
 import firbase.go.beruniy.R
 import firbase.go.beruniy.view_setup.DialogBuilder
 import firbase.go.beruniy.view_setup.MyDateTimePicker
@@ -39,6 +41,25 @@ class UI {
 
         fun dialog(): DialogBuilder {
             return DialogBuilder()
+        }
+
+        fun createDialog(
+            context: Activity,
+            layout: Int,
+            cancelable: Boolean
+        ) {
+
+            val dialogBuilder = AlertDialog.Builder(context)
+            val dialog = dialogBuilder.create()
+            val view = context.layoutInflater.inflate(layout, null)
+
+
+            dialog.setCancelable(cancelable)
+            dialog.setView(view)
+            dialog.setCanceledOnTouchOutside(cancelable)
+
+
+            dialog.show()
         }
 
         fun popup(): PopupBuilder {
