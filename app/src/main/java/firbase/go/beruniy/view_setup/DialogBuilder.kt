@@ -4,10 +4,10 @@ import android.app.Activity
 import android.app.AlertDialog
 import android.view.View
 import android.widget.ArrayAdapter
-import firbase.go.beruniy.utils.Command
 import firbase.go.beruniy.R
 import firbase.go.beruniy.collection.MyArray
-import java.util.ArrayList
+import firbase.go.beruniy.utils.Command
+import java.util.*
 
 class DialogBuilder {
     private var mTitle: Any? = null
@@ -224,7 +224,7 @@ class DialogBuilder {
         context: Activity,
         layout: Int,
         cancelable: Boolean
-    ) {
+    ): androidx.appcompat.app.AlertDialog {
 
         val dialogBuilder = androidx.appcompat.app.AlertDialog.Builder(context)
         val dialog = dialogBuilder.create()
@@ -236,6 +236,7 @@ class DialogBuilder {
 
 
         dialog.show()
+        return dialog
     }
 
     interface CommandFacade<T> {
