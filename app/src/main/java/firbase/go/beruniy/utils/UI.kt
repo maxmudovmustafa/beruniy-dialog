@@ -2,14 +2,19 @@ package firbase.go.beruniy.utils
 
 import android.app.Activity
 import android.view.MotionEvent
-import android.view.View
 import android.widget.EditText
+import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.FragmentActivity
+import androidx.recyclerview.widget.RecyclerView
 import firbase.go.beruniy.R
 import firbase.go.beruniy.view_setup.DialogBuilder
 import firbase.go.beruniy.view_setup.MyDateTimePicker
 import firbase.go.beruniy.view_setup.MyTimePickerDialog
-import firbase.go.beruniy.view_setup.PopupBuilder
+import firbase.go.beruniy.view_setup.bottom.BottomSheetDialog
+import firbase.go.beruniy.view_setup.listener.Command
+import firbase.go.beruniy.view_setup.listener.CommandFacade
+import firbase.go.beruniy.view_setup.popup.PopupBuilder
 
 class UI {
     companion object {
@@ -88,5 +93,94 @@ class UI {
                 .negative(Util.NOOP)
                 .show(activity)
         }
+
+        //----------------------------------------------------------------------------------------------
+
+        //----------------------------------------------------------------------------------------------
+        fun bottomSheet(): BottomSheetDialog.Builder {
+            return BottomSheetDialog.Builder()
+        }
+
+        //----------------------------------------------------------------------------------------------
+
+        //----------------------------------------------------------------------------------------------
+        fun <T> bottomSheet(
+            activity: FragmentActivity,
+            title: CharSequence,
+            values: Collection<T>,
+            command: CommandFacade<T>
+        ) {
+            bottomSheet().title(title).option(values, command).show(activity)
+        }
+
+        fun <T> bottomSheet(
+            activity: FragmentActivity?, @StringRes resId: Int,
+            values: Collection<T>?,
+            command: CommandFacade<T>?
+        ) {
+            bottomSheet().title(resId).option(values, command).show(activity)
+        }
+
+        fun <T> bottomSheet(
+            activity: FragmentActivity?,
+            values: Collection<T>?,
+            command: CommandFacade<T>?
+        ) {
+            bottomSheet().option(values, command).show(activity)
+        }
+
+        //----------------------------------------------------------------------------------------------
+
+        //----------------------------------------------------------------------------------------------
+        fun <T> bottomSheet(
+            activity: FragmentActivity,
+            title: CharSequence,
+            values: Array<T>,
+            command: CommandFacade<T>
+        ) {
+            bottomSheet().title(title).option(values, command).show(activity)
+        }
+
+        fun <T> bottomSheet(
+            activity: FragmentActivity?, @StringRes resId: Int,
+            values: Array<T>?,
+            command: CommandFacade<T>?
+        ) {
+            bottomSheet().title(resId).option(values, command).show(activity)
+        }
+
+        fun <T> bottomSheet(
+            activity: FragmentActivity?,
+            values: Array<T>?,
+            command: CommandFacade<T>?
+        ) {
+            bottomSheet().option(values, command).show(activity)
+        }
+
+        //----------------------------------------------------------------------------------------------
+
+        //----------------------------------------------------------------------------------------------
+//        fun bottomSheet(
+//            activity: FragmentActivity,
+//            title: CharSequence,
+//            adapter: RecyclerView.Adapter
+//        ) {
+//            bottomSheet().title(title).adapter(adapter).show(activity)
+//        }
+//
+//        fun bottomSheet(
+//            activity: FragmentActivity?, @StringRes resId: Int,
+//            adapter: RecyclerView.Adapter
+//        ) {
+//            bottomSheet().title(resId).adapter(adapter).show(activity)
+//        }
+//
+//        fun <T> bottomSheet(
+//            activity: FragmentActivity,
+//            adapter: RecyclerView.Adapter<T>
+//        ) {
+//            bottomSheet().adapter(adapter).show(activity)
+//        }
+
     }
 }

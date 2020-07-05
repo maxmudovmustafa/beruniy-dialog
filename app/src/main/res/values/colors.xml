@@ -68,4 +68,6 @@
         <item>#ad62a7</item>
     </array>
 
+
+    <color name="dialog_title_color">#333333</color>
 </resources>

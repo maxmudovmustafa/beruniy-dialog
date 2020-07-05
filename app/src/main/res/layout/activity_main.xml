@@ -1,35 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         tools:context=".MainActivity">
 
     <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/btnAlert"
+            android:layout_width="190dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="text"
-            android:background="@drawable/button_accent_background"/>
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/button_accent_background"
+            android:text="Alert"
+            android:textColor="@color/white" />
+
     <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:ignore="MissingConstraints"/>
+            android:id="@+id/btnConfirm"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_accent_background"
+            android:text="confirm"
+            android:textColor="@color/white" />
 
-    <firbase.go.beruniy.view_setup.slider.SlidingSquareLoaderView
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:sslv_corner_radius="10dp"
-            app:sslv_margin="10dp"
-            app:sslv_end_gradient_color="@color/end_gradient_color"
-            app:sslv_start_gradient_color="@color/start_gradient_color"
-            app:sslv_background_color="@color/background"
-            app:sslv_square_size="@dimen/square_size"/>
+    <EditText
+            android:id="@+id/btnCalendar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            />
 
+    <Button
+            android:id="@+id/btnDialog"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_accent_background"
+            android:text="Dialog"
+            android:textColor="@color/white" />
+
+
+    <Button
+            android:id="@+id/btnNeutral"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_accent_background"
+            android:text="Neutral Dialog"
+            android:textColor="@color/white" />
+
+
+    <Button
+            android:id="@+id/btnDialogOption"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_accent_background"
+            android:text="Dialog Option"
+            android:textColor="@color/white" />
+
+
+    <Button
+            android:id="@+id/btnCustom"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_accent_background"
+            android:text="Dialog Custom"
+            android:textColor="@color/white" />
+
+
+    <Button
+            android:id="@+id/btnBottom"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_accent_background"
+            android:text="Dialog bottom"
+            android:textColor="@color/white" />
+
+
+    <Button
+            android:id="@+id/btnDialogView"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_accent_background"
+            android:text="Dialog Bottom View"
+            android:textColor="@color/white" />
+
+
+    <Button
+            android:id="@+id/btnDialogPopUP"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_accent_background"
+            android:text="Dialog PopUp"
+            android:textColor="@color/white" />
 
 </LinearLayout>

@@ -5,8 +5,8 @@ import android.app.AlertDialog
 import android.view.View
 import android.widget.ArrayAdapter
 import firbase.go.beruniy.R
-import firbase.go.beruniy.collection.MyArray
-import firbase.go.beruniy.utils.Command
+import firbase.go.beruniy.view_setup.listener.Command
+import firbase.go.beruniy.view_setup.listener.CommandFacade
 import java.util.*
 
 class DialogBuilder {
@@ -126,7 +126,7 @@ class DialogBuilder {
         return optionPrivate(stringId, command)
     }
 
-    fun <T> option(values: MyArray<T>, command: CommandFacade<T>): DialogBuilder {
+    fun <T> option(values: List<T>, command: CommandFacade<T>): DialogBuilder {
         for (value in values) {
             optionPrivate(command.getName(value), object : Command {
                 override fun apply() {
@@ -237,13 +237,5 @@ class DialogBuilder {
 
         dialog.show()
         return dialog
-    }
-
-    interface CommandFacade<T> {
-
-        fun getName(`val`: T): CharSequence
-
-        fun apply(`val`: T)
-
     }
 }

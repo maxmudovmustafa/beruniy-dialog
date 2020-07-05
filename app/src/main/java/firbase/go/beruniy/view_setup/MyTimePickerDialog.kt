@@ -13,16 +13,16 @@ class MyTimePickerDialog(private var et: EditText) : TimePickerDialog.OnTimeSetL
     }
 
     fun show() {
-        var c = Calendar.getInstance()
-        var hour = c.get(11)
-        var minute = c.get(12)
-        var time = et.text.toString()
+        val c = Calendar.getInstance()
+        var hour = c.get(11 as Int)
+        var minute = c.get(12 as Int)
+        val time = et.text.toString()
         if (time.length > 0) {
             hour = hourOfTime(time)
             minute = minuteOfTime(time)
         }
 
-        var tp =
+        val tp =
             TimePickerDialog(et.context,
                 R.style.AppCompatAlertDialogStyle,
                 MyTimePickerDialog(et), hour, minute, true)
@@ -32,7 +32,7 @@ class MyTimePickerDialog(private var et: EditText) : TimePickerDialog.OnTimeSetL
     private fun padTime(time: Int): String {
         if (time >= 0) {
 
-            var r = time.toString()
+            val r = time.toString()
             when (r.length) {
                 1 -> return "0$r"
                 2 -> return r
