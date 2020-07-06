@@ -5,6 +5,7 @@ import android.app.AlertDialog
 import android.view.View
 import android.widget.ArrayAdapter
 import firbase.go.beruniy.R
+import firbase.go.beruniy.collection.MyArray
 import firbase.go.beruniy.view_setup.listener.Command
 import firbase.go.beruniy.view_setup.listener.CommandFacade
 import java.util.*
@@ -126,7 +127,7 @@ class DialogBuilder {
         return optionPrivate(stringId, command)
     }
 
-    fun <T> option(values: List<T>, command: CommandFacade<T>): DialogBuilder {
+    fun <T> option(values: MyArray<T>, command: CommandFacade<T>): DialogBuilder {
         for (value in values) {
             optionPrivate(command.getName(value), object : Command {
                 override fun apply() {
@@ -222,13 +223,12 @@ class DialogBuilder {
 
     fun createDialog(
         context: Activity,
-        layout: Int,
+        vsRoot: View,
         cancelable: Boolean
     ): androidx.appcompat.app.AlertDialog {
 
         val dialogBuilder = androidx.appcompat.app.AlertDialog.Builder(context)
         val dialog = dialogBuilder.create()
-        vsRoot = context.layoutInflater.inflate(layout, null)
 
         dialog.setCancelable(cancelable)
         dialog.setView(vsRoot)

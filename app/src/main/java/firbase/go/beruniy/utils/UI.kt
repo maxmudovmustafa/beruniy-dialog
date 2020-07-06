@@ -1,12 +1,18 @@
 package firbase.go.beruniy.utils
 
 import android.app.Activity
+import android.app.Dialog
+import android.content.Context
+import android.util.TypedValue
+import android.view.Gravity
 import android.view.MotionEvent
+import android.view.View
 import android.widget.EditText
+import android.widget.LinearLayout
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.FragmentActivity
-import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import firbase.go.beruniy.R
 import firbase.go.beruniy.view_setup.DialogBuilder
 import firbase.go.beruniy.view_setup.MyDateTimePicker
@@ -14,7 +20,9 @@ import firbase.go.beruniy.view_setup.MyTimePickerDialog
 import firbase.go.beruniy.view_setup.bottom.BottomSheetDialog
 import firbase.go.beruniy.view_setup.listener.Command
 import firbase.go.beruniy.view_setup.listener.CommandFacade
+import firbase.go.beruniy.view_setup.listener.CommandPopup
 import firbase.go.beruniy.view_setup.popup.PopupBuilder
+
 
 class UI {
     companion object {
@@ -71,6 +79,18 @@ class UI {
             return PopupBuilder()
         }
 
+        fun <T> popup(
+            view: View,
+            values: Collection<T>,
+            command: CommandFacade<T>
+        ) {
+            popup().option(values, command).show(view)
+        }
+
+        fun popup(view: View, command: CommandPopup) {
+            popup().show(view, command)
+        }
+
         fun alert(
             activity: Activity,
             title: CharSequence,
@@ -102,6 +122,32 @@ class UI {
         }
 
         //----------------------------------------------------------------------------------------------
+
+        fun createBottomDialog(view: View, activity: Activity): Dialog {
+            val dialog = Dialog(activity, R.style.MaterialDialogSheet)
+            dialog.setContentView(view)
+            dialog.setCancelable(true)
+            dialog.window?.setLayout(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            )
+            dialog.window?.setGravity(Gravity.BOTTOM)
+            return dialog
+        }
+
+
+        fun bottomSheetDialog(context: Context, view: View): com.google.android.material.bottomsheet.BottomSheetDialog {
+            val bottomSheetDialog =
+                com.google.android.material.bottomsheet.BottomSheetDialog(context)
+            bottomSheetDialog.setContentView(view)
+            val bottomSheetBehavior: BottomSheetBehavior<*> =
+                BottomSheetBehavior.from(view.parent as View)
+            bottomSheetBehavior.peekHeight = TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP, 100f, context.resources.displayMetrics
+            ).toInt()
+
+            return bottomSheetDialog
+        }
 
         //----------------------------------------------------------------------------------------------
         fun <T> bottomSheet(
